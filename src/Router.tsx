@@ -20,12 +20,15 @@ import pressReleaseList from "@routes/pressrelease/pressReleaseList";
 
 import earlyDeliverySearch from "@routes/delivery/earlyDeliverySearch";
 
+import ScrollToTop from "@components/Scroll/ScrollToTop";
 import Header from "@components/Layout/Header";
 import Footer from "@components/Layout/Footer";
+
 
 const AppRouter = () => {
   return (
     <BrowserRouter basename="teamfresh_clone">
+      <ScrollToTop />
       <Header />
       <Switch>
         <Route exact path="/" component={Main} />
