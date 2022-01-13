@@ -1,0 +1,35 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        
+        "paths": {
+            "@routes/*": ["routes/*"],
+            "@styles/*": ["styles/*"],
+            "@fonts/*": ["fonts/*"],
+            "@components/*": ["components/*"],
+            "@assets/*": ["assets/*"],
+            "@type/*": ["type/*"],
+            "@tempData/*": ["tempData/*"]
+            },
+
+        "removeComments": true,
+        "target": "es6",
+        "sourceMap": true,
+
+        "strict": true,
+
+        "noEmitOnError": true,
+        "skipLibCheck": true,
+
+        "jsx": "react",
+        "module": "commonjs",
+        "outDir": "./dist",
+
+        "esModuleInterop": true,
+
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+
+        "noEmit": true
+    }
+}
