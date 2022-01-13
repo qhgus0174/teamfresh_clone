@@ -10,6 +10,7 @@ import Check from "@components/Image/Check";
 import Back from "@components/Image/Back";
 import { IResponse } from "@type/Response";
 import { widthMedia } from "@styles/device";
+import { getErrorMsg } from "utils/response";
 
 interface IIsEarlyDelivery {
   delyverResult: string;
@@ -37,9 +38,10 @@ const EarlyDeliverySearch = () => {
     setIsSearchComplete(true);
   };
 
-  const getSearchIsEarlyDelivery = async () => {
+  const getSearchIsEarlyDelivery = async (): Promise<Response> => {
     const response = await fetch("/api/delivery/searchDeliveryAreaForTest", {
       method: "post",
+      headers: { "Content-Type": "application/json;charset=utf-8" },
       body: JSON.stringify({
         addrBasic: `${address} ${detailAddress}`,
       }),
@@ -50,23 +52,35 @@ const EarlyDeliverySearch = () => {
 
   const onClickSearchIsEarlyDelivery = async () => {
     try {
-      const response = await getSearchIsEarlyDelivery();
+      const response = await getSearchIsEarlyDelivery(),
+        { ok, status } = response;
 
-      if (!response.ok) throw new Error("에러 발생");
+      if (!ok)
+        throw new Error(
+          JSON.stringify(
+            getErrorMsg({ type: "response", code: String(status) })
+          )
+        );
 
       const {
         resultCode,
         result: { delyverYn },
       }: IResponse<IIsEarlyDelivery> = await response.json();
 
-      if (resultCode !== "0000") throw new Error("에러 발생");
+      if (resultCode !== "0000")
+        throw new Error(
+          JSON.stringify(
+            getErrorMsg({ type: "resultCode", code: String(status) })
+          )
+        );
 
       setIseDelyver(delyverYn === "1");
       setIsModalOpen(true);
     } catch (e: unknown) {
       const { message } = e as Error;
-      console.log(e);
-      //에러 처리 코드
+
+      alert("데이터를 검색하던 중 오류가 발생하였습니다.");
+      //에러 처리 로직 추가 필요.
     }
   };
 
