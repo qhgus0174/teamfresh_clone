@@ -1,14 +1,18 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styled, { useTheme } from 'styled-components';
 import LogoImg from '@assets/img/logo.png';
 import MenuIcon from '@components/Image/Menu';
 import { menuData } from '@tempData/menu';
 import { widthMedia } from '@styles/device';
+import { useOnClickOutside } from 'hooks/useOnClickOutside';
 
 const Header = () => {
     const theme = useTheme();
     const [shownMenuId, setShownMenuId] = useState<string>('');
+    
+    const ref = useRef<HTMLUListElement>(null);
+    useOnClickOutside(ref, () => resetOpenMenu());
 
     const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
@@ -20,6 +24,7 @@ const Header = () => {
         setShownMenuId('');
         setIsMenuOpen(false);
     };
+    
 
     return (
         <Container>
@@ -32,7 +37,7 @@ const Header = () => {
                 </DropDownButton>
             </Logo>
             <Menu>
-                <ItemList visible={isMenuOpen}>
+                <ItemList ref={ref} visible={isMenuOpen}>
                     {menuData.map(({ id, title: menuTitle, link: menuLink, sub }, menuIndex) => {
                         return (
                             <Item
