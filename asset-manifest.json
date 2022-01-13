@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/teamfresh_clone/static/css/main.bda25692.css",
+    "main.js": "/teamfresh_clone/static/js/main.8cd5293f.js",
+    "static/media/img3.png": "/teamfresh_clone/static/media/img3.8e3a9fcaf35fb8bbcdf2.png",
+    "static/media/main_card2.png": "/teamfresh_clone/static/media/main_card2.31ee439eb6d6ae8b03d7.png",
+    "static/media/img2.png": "/teamfresh_clone/static/media/img2.6d203c56a4785d5f47eb.png",
+    "static/media/img1.png": "/teamfresh_clone/static/media/img1.9769cfc095c230e05284.png",
+    "static/media/main_card1.png": "/teamfresh_clone/static/media/main_card1.7b84c4eaf28e919bb597.png",
+    "static/media/NotoSans-Bold.otf": "/teamfresh_clone/static/media/NotoSans-Bold.0476118dfa60ca86b7e3.otf",
+    "static/media/NotoSans-Regular.otf": "/teamfresh_clone/static/media/NotoSans-Regular.1ef18564a8565bc7e1f5.otf",
+    "static/media/NotoSans-Medium.otf": "/teamfresh_clone/static/media/NotoSans-Medium.2a96bfa2f634b7b6baec.otf",
+    "static/media/NotoSans-Bold.woff": "/teamfresh_clone/static/media/NotoSans-Bold.ba396a9fc63ba86c7d0a.woff",
+    "static/media/NotoSans-Regular.woff": "/teamfresh_clone/static/media/NotoSans-Regular.d19c129f30e0373f60b6.woff",
+    "static/media/NotoSans-Medium.woff": "/teamfresh_clone/static/media/NotoSans-Medium.e892f21f7dd918a8fab9.woff",
+    "static/media/NotoSans-Bold.woff2": "/teamfresh_clone/static/media/NotoSans-Bold.a2b8ed27e25e7116ab30.woff2",
+    "static/media/NotoSans-Medium.woff2": "/teamfresh_clone/static/media/NotoSans-Medium.43b5c29006f365a91ccd.woff2",
+    "static/media/NotoSans-Regular.woff2": "/teamfresh_clone/static/media/NotoSans-Regular.12c5f3f9045594368915.woff2",
+    "static/media/main_card3.jpg": "/teamfresh_clone/static/media/main_card3.d0e15dd6af76f8f77823.jpg",
+    "static/media/main_card4.jpg": "/teamfresh_clone/static/media/main_card4.b10969446f418a351412.jpg",
+    "index.html": "/teamfresh_clone/index.html",
+    "main.bda25692.css.map": "/teamfresh_clone/static/css/main.bda25692.css.map",
+    "main.8cd5293f.js.map": "/teamfresh_clone/static/js/main.8cd5293f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.bda25692.css",
+    "static/js/main.8cd5293f.js"
+  ]
+}
