@@ -205,7 +205,7 @@ const SearchContainer = styled.div`
   box-sizing: border-box;
   margin-top: 2em;
 
-  width: 50%;
+  width: 75%;
 `;
 
 const SearchBack = styled.div`
